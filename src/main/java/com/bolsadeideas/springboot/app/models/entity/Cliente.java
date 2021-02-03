@@ -1,7 +1,9 @@
 package com.bolsadeideas.springboot.app.models.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -9,7 +11,6 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
-
 
 @Entity
 @Table(name = "clientes")
@@ -21,19 +22,28 @@ public class Cliente implements Serializable {
 
 	@NotEmpty
 	private String nombre;
-	
+
 	@NotEmpty
 	private String apellido;
-	
+
 	@Email
 	private String email;
 
 	@NotNull
 	@Column(name = "create_at")
 	@Temporal(TemporalType.DATE)
-	@DateTimeFormat(pattern="yyyy-MM-dd")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date createAt;
-	
+
+	//La relacion cliente es de un solo a muchas facturas
+	@OneToMany(mappedBy="cliente", fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	private List<Factura> facturas;
+
+	public Cliente() {
+
+		facturas = new ArrayList<Factura>();
+	}
+
 	private String foto;
 
 	public Long getId() {
@@ -86,6 +96,23 @@ public class Cliente implements Serializable {
 
 	public void setFoto(String foto) {
 		this.foto = foto;
+	}
+
+	public List<Factura> getFacturas() {
+		return facturas;
+	}
+
+	public void setFacturas(List<Factura> facturas) {
+		this.facturas = facturas;
+	}
+
+	public void addFacturas(Factura factura) {
+		facturas.add(factura);
+	}
+
+	@Override
+	public String toString() {
+		return nombre + " " + apellido;
 	}
 
 	private static final long serialVersionUID = 1L;
