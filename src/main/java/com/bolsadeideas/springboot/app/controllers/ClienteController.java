@@ -19,6 +19,11 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -81,13 +86,14 @@ public class ClienteController {
 		return "ver";
 	}
  
-	@RequestMapping(value="/listar", method=RequestMethod.GET)
-	public String listar(@RequestParam(name="page", defaultValue="0") int page, Model model) {
+	@RequestMapping(value = {"/listar", "/"}, method=RequestMethod.GET)
+	public String listar(@RequestParam(name="page", defaultValue="0") int page, Model model,
+			Authentication authentication) {
 		
 		Pageable pageRequest = PageRequest.of(page, 5);
 		
 		Page<Cliente> clientes = clienteService.findAll(pageRequest);
-		
+		 
 		PageRender<Cliente> pageRender = new PageRender<>("/listar", clientes);
 		model.addAttribute("titulo", "Listado de clientes");
 		model.addAttribute("clientes", clientes);
@@ -193,4 +199,5 @@ public class ClienteController {
 		}
 		return "redirect:/listar";
 	}
+	
 }

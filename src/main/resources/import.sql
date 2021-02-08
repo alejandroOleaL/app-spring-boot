@@ -39,5 +39,10 @@ INSERT INTO facturas_items(cantidad, producto_id, factura_id) VALUES (2, 2, 1);
 INSERT INTO facturas_items(cantidad, producto_id, factura_id) VALUES (1, 3, 2);
 
 
+INSERT INTO users (username, password, enabled) VALUES('andres', '$2a$10$rh3AtT7aVrqCf85VReMD..pwyXpz8T1UuCdfJZsrcCb1xMq14gC6y', 1);
+INSERT INTO users (username, password, enabled) VALUES('admin', '$2a$10$3BULRvCQ2fCzsxQFKV8o1OCxy/Ei/9YXRYFYWZAk.hpLuZ3ecPaly', 1);
 
+INSERT INTO authorities (user_id, authority) VALUES(1, 'ROLE_USER');
+INSERT INTO authorities (user_id, authority) VALUES(2, 'ROLE_ADMIN');
+INSERT INTO authorities (user_id, authority) VALUES(2, 'ROLE_USER');
 
