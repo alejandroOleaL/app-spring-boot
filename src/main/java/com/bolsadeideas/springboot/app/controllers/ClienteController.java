@@ -6,12 +6,14 @@ import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Locale;
 import java.util.Map;
 import java.util.UUID;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.data.domain.Page;
@@ -45,6 +47,9 @@ public class ClienteController {
 	private IClienteService clienteService;
 	
 	private final static String UPLOADS_FOLDER = "uploads";
+	
+	@Autowired
+	private MessageSource messageSource;
 	
 	@GetMapping(value="/uploads/{filename:.+}")
 	public ResponseEntity<Resource> verFoto(@PathVariable String filename) {
@@ -84,14 +89,15 @@ public class ClienteController {
  
 	@RequestMapping(value = {"/listar", "/"}, method=RequestMethod.GET)
 	public String listar(@RequestParam(name="page", defaultValue="0") int page, Model model,
-			Authentication authentication) {
+			Authentication authentication,
+			Locale locale) {
 		
 		Pageable pageRequest = PageRequest.of(page, 5);
 		
 		Page<Cliente> clientes = clienteService.findAll(pageRequest);
 		 
 		PageRender<Cliente> pageRender = new PageRender<>("/listar", clientes);
-		model.addAttribute("titulo", "Listado de clientes");
+		model.addAttribute("titulo", messageSource.getMessage("text.cliente.listar.titulo", null, locale));
 		model.addAttribute("clientes", clientes);
 		model.addAttribute("page", pageRender);
 		return "listar";
