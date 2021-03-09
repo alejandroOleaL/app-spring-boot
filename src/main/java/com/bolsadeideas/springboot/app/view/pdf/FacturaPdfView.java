@@ -30,6 +30,8 @@ public class FacturaPdfView extends AbstractPdfView{
 	
 	@Autowired
 	private LocaleResolver localeResolver;
+	
+	public static final String logo = "//images//logo.png";
 
 	@Override
 	protected void buildPdfDocument(Map<String, Object> model, Document document, PdfWriter writer,
@@ -41,24 +43,25 @@ public class FacturaPdfView extends AbstractPdfView{
 		
 		MessageSourceAccessor mensajes = getMessageSourceAccessor();
 		
+		
 		PdfPTable tabla = new PdfPTable(1);
 		tabla.setSpacingAfter(20);
 		
 		PdfPCell cell = null;
 		
 		cell = new PdfPCell(new Phrase(messageSource.getMessage("text.factura.ver.datos.cliente", null, locale)));
-		cell.setBackgroundColor(new Color(184, 218, 255));
+		cell.setBackgroundColor(new Color(255, 199, 51));
 		cell.setPadding(8f);
 		tabla.addCell(cell);
 		
-		tabla.addCell(factura.getCliente().getNombre() + " " + factura.getCliente().getApellido());
-		tabla.addCell(factura.getCliente().getEmail());
+		tabla.addCell(mensajes.getMessage("text.cliente.nombre") + ": " + factura.getCliente().getNombre() + " " + factura.getCliente().getApellido());
+		tabla.addCell(mensajes.getMessage("text.cliente.email") + ": " + factura.getCliente().getEmail());
 		
 		PdfPTable tabla2 = new PdfPTable(1);
 		tabla2.setSpacingAfter(20);
 		
 		cell = new PdfPCell(new Phrase(messageSource.getMessage("text.factura.ver.datos.factura", null, locale)));
-		cell.setBackgroundColor(new Color(195, 230, 203));
+		cell.setBackgroundColor(new Color(255, 199, 51));
 		cell.setPadding(8f);
 		
 		tabla2.addCell(cell);
@@ -70,6 +73,7 @@ public class FacturaPdfView extends AbstractPdfView{
 		document.add(tabla2);
 		
 		PdfPTable tabla3 = new PdfPTable(4);
+		cell.setBackgroundColor(new Color(255, 199, 51));
 		tabla3.setWidths(new float [] {3.5f, 1, 1, 1});
 		tabla3.addCell(mensajes.getMessage("text.factura.form.item.nombre"));
 		tabla3.addCell(mensajes.getMessage("text.factura.form.item.precio"));

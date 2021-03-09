@@ -25,11 +25,15 @@ INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(22, 'F
 INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(23, 'Andres', 'Guzman', 'profeshaasor@bolsa.com', '2017-08-28', '');
 INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(24, 'Frankie', 'De John', 'dejyohn@gmail.com', '2017-08-28', '');
 
-INSERT INTO productos(nombre, precio, create_at) VALUES('Panasonic Pantalla LCD', 25990, NOW());
-INSERT INTO productos(nombre, precio, create_at) VALUES('Sony Camara digital DSC-W1990', 12360, NOW());
-INSERT INTO productos(nombre, precio, create_at) VALUES('Apple iPod Shuffle', 1499890, NOW());
-INSERT INTO productos(nombre, precio, create_at) VALUES('Malla Ciclonica De Acero 30487', 1769, NOW());
-INSERT INTO productos(nombre, precio, create_at) VALUES('Disco de sierra Corte de Aluminio', 1017, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Panasonic Pantalla LCD', 25990, 4, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Sony Camara digital DSC-W1990', 3, 12360, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Apple iPod Shuffle', 1499890, 2, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Malla Ciclonica De Acero 30487', 6, 1769, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Disco de sierra Corte de Aluminio', 4, 1017, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Martillo de corte doble', 56790, 5, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Tornillos 2 pulgadas', 90, 60, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Pala', 350, 22, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Hacha', 190, 7, NOW());
 
 INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES ('Factura equipos de oficina', null, 1, NOW());
 INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES ('Factura Bicicleta', 'Nota', 1, NOW());

@@ -8,6 +8,7 @@ import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
@@ -26,6 +27,17 @@ public class MvcConfig implements WebMvcConfigurer{
 		registry.addResourceHandler("/uploads/**")
 		.addResourceLocations(resourcePath);
 	}*/
+	
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		// TODO Auto-generated method stub
+		WebMvcConfigurer.super.addResourceHandlers(registry);
+		
+		WebMvcConfigurer.super.addResourceHandlers(registry);
+		
+		registry.addResourceHandler("/uploads/**")
+		.addResourceLocations("file:/C:/Temp/uploads/");
+	}
 	
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/error_403").setViewName("error_403");

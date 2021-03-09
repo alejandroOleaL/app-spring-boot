@@ -48,11 +48,12 @@ public class ClienteController {
 	@Autowired
 	private IClienteService clienteService;
 	
-	private final static String UPLOADS_FOLDER = "uploads";
+	//private final static String UPLOADS_FOLDER = "uploads";
 	
 	@Autowired
 	private MessageSource messageSource;
 	
+	/*
 	@GetMapping(value="/uploads/{filename:.+}")
 	public ResponseEntity<Resource> verFoto(@PathVariable String filename) {
 		Path pathFoto = Paths.get(UPLOADS_FOLDER).resolve(filename).toAbsolutePath();
@@ -72,7 +73,7 @@ public class ClienteController {
 				.header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + recurso.getFilename() +"\"")
 				.body(recurso);
 		
-	}
+	}*/
 	
 	@GetMapping(value="/ver/{id}")
 	public String ver(@PathVariable(value="id") Long id, Map<String, Object> model, RedirectAttributes flash) {
@@ -141,14 +142,14 @@ public class ClienteController {
 	}
 	
 	@RequestMapping(value = "/form", method = RequestMethod.POST)
-	public String guardar(@Valid Cliente cliente, BindingResult result, Model model, 
-			@RequestParam("file") MultipartFile foto, RedirectAttributes flash, SessionStatus status) {
+	public String guardar(@Valid Cliente cliente, BindingResult result, Model model, RedirectAttributes flash, SessionStatus status) {
 		
 		if(result.hasErrors()) {
 			model.addAttribute("titulo", "Formulario del Cliente");
 			return "form";
 		}
 		
+		/*
 		if(!foto.isEmpty()) {
 			
 			if(cliente.getId() != null && cliente.getId() > 0 
@@ -180,7 +181,7 @@ public class ClienteController {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
+		}*/
 		
 		String mensajeFlash = (cliente.getId() != null)? "Cliente editado con éxito!" : "Cliente creado con éxito!";
 		

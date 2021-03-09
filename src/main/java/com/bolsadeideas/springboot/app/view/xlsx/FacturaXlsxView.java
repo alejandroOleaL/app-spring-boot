@@ -47,9 +47,9 @@ public class FacturaXlsxView extends AbstractXlsxView {
 		cell.setCellValue(factura.getCliente().getEmail());
 
 		sheet.createRow(4).createCell(0).setCellValue(mensajes.getMessage("text.factura.ver.datos.factura"));
-		sheet.createRow(5).createCell(0).setCellValue(mensajes.getMessage("text.cliente.factura.folio") + factura.getId());
-		sheet.createRow(6).createCell(0).setCellValue(mensajes.getMessage("text.cliente.factura.descripcion") + factura.getDescripcion());
-		sheet.createRow(7).createCell(0).setCellValue(mensajes.getMessage("text.cliente.factura.fecha") + factura.getCreateAt());
+		sheet.createRow(5).createCell(0).setCellValue(mensajes.getMessage("text.cliente.factura.folio")  + ": " + factura.getId());
+		sheet.createRow(6).createCell(0).setCellValue(mensajes.getMessage("text.cliente.factura.descripcion") +  ": " +  factura.getDescripcion());
+		sheet.createRow(7).createCell(0).setCellValue(mensajes.getMessage("text.cliente.factura.fecha")  + ": " +  factura.getCreateAt());
 
 		CellStyle theaderStyle = workbook.createCellStyle();
 		theaderStyle.setBorderBottom(BorderStyle.MEDIUM);

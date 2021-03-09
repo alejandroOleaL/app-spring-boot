@@ -8,31 +8,35 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
-@Table(name="productos")
+@Table(name = "productos")
 public class Producto implements Serializable {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	private String nombre;
+
 	private Double precio;
-	
+
+	private Integer stock;
+
+	@NotNull
+	@Column(name = "create_at")
 	@Temporal(TemporalType.DATE)
-	@Column(name="create_at")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date createAt;
-	
-	// Metodo para generar la fecha antes de persistir en la bd
-	@PrePersist
-	public void prePersist() {
-		createAt = new Date();
-	}
 
 	public Long getId() {
 		return id;
@@ -58,6 +62,14 @@ public class Producto implements Serializable {
 		this.precio = precio;
 	}
 
+	public Integer getStock() {
+		return stock;
+	}
+
+	public void setStock(Integer stock) {
+		this.stock = stock;
+	}
+
 	public Date getCreateAt() {
 		return createAt;
 	}
@@ -65,10 +77,7 @@ public class Producto implements Serializable {
 	public void setCreateAt(Date createAt) {
 		this.createAt = createAt;
 	}
-
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 
 }

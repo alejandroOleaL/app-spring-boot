@@ -39,12 +39,12 @@ public class FacturaController {
 		Factura factura = clienteService.fetchFacturaByIdWithClienteWithItemFacturaWithProducto(id); // clienteService.findFacturaById(id);
 
 		if (factura == null) {
-			flash.addAttribute("error", "La factura no existe en la bd!");
+			flash.addAttribute("error", "La venta no existe en la bd!");
 			return "redirect:/listar";
 		}
 
 		model.addAttribute("factura", factura);
-		model.addAttribute("titulo", "Factura: ".concat(factura.getDescripcion()));
+		model.addAttribute("titulo", "Venta: ".concat(factura.getDescripcion()));
 
 		return "factura/ver";
 	}
@@ -63,7 +63,7 @@ public class FacturaController {
 		factura.setCliente(cliente);
 
 		model.put("factura", factura);
-		model.put("titulo", "Crear Factura");
+		model.put("titulo", "Guardar Venta");
 
 		return "factura/form";
 	}
@@ -80,13 +80,13 @@ public class FacturaController {
 			SessionStatus status) {
 
 		if (result.hasErrors()) {
-			model.addAttribute("titulo", "Crear Factura");
+			model.addAttribute("titulo", "Guardar Venta");
 			return "factura/form";
 		}
 
 		if (itemId == null || itemId.length == 0) {
-			model.addAttribute("titulo", "Crear Factura");
-			model.addAttribute("error", "Error: La factura NO puede no tener líneas!");
+			model.addAttribute("titulo", "Guardar Venta");
+			model.addAttribute("error", "Error: La venta NO puede no tener líneas!");
 			return "factura/form";
 		}
 
@@ -102,7 +102,7 @@ public class FacturaController {
 		clienteService.saveFactura(factura);
 		status.setComplete();
 
-		flash.addFlashAttribute("success", "Factura creada con éxito!");
+		flash.addFlashAttribute("success", "Venta  se guardo correctamente!");
 
 		return "redirect:/ver/" + factura.getCliente().getId();
 	}
@@ -114,11 +114,11 @@ public class FacturaController {
 
 		if (factura != null) {
 			clienteService.deleteFactura(id);
-			flash.addFlashAttribute("success", "Factura eliminada con éxito!");
+			flash.addFlashAttribute("success", "Venta eliminada con éxito!");
 			return "redirect:/ver/" + factura.getCliente().getId();
 		}
 
-		flash.addFlashAttribute("error", "La factura no existe en la base de datos, no se pudo eliminar!");
+		flash.addFlashAttribute("error", "La venta no existe en la base de datos, no se pudo eliminar!");
 		return "redirect:/listar";
 	}
 
