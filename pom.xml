@@ -9,10 +9,10 @@
 		<version>2.4.2</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.bolsadeideas.springboot.datajpa.app</groupId>
-	<artifactId>spring-boot-data-jpa</artifactId>
+	<groupId>alejandroolea.netlify.app.ferregym</groupId>
+	<artifactId>spring-boot-ferre-gym</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-data-jpa</name>
+	<name>spring-boot-ferre-gym</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
