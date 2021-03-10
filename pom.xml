@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>alejandroolea.netlify.app.ferregym</groupId>
-	<artifactId>spring-boot-ferre-gym</artifactId>
+	<artifactId>ferre-gym</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-ferre-gym</name>
+	<name>ferre-gym</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -116,5 +116,6 @@
 			</plugin>
 		</plugins>
 	</build>
+	</artifactId>
 
 </project>
