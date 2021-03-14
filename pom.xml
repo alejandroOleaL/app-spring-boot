@@ -9,10 +9,10 @@
 		<version>2.4.2</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>alejandroolea.netlify.app.ferregym</groupId>
-	<artifactId>ferre-gym</artifactId>
+	<groupId>com.bolsadeideas.springboot.app.ferregym</groupId>
+	<artifactId>ferregym</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ferre-gym</name>
+	<name>ferregym</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -116,6 +116,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	</artifactId>
 
 </project>
