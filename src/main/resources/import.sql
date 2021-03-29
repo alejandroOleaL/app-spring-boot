@@ -4,43 +4,51 @@ INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(2, 'Vi
 
 INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(3, 'Fernando', 'Garcia', 'fgarcia@outlook.com', '2021-01-08', '');
 INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(4, 'Axel', 'Martinez', 'axelmar@hotmail.com', '2021-02-21', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(5, 'Andres', 'Guzman', 'profedsor@bolsma.com', '2020-12-07', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(6, 'Frankie', 'De John', 'dejochn@gmaiul.com', '2021-01-23', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(7, 'Andres', 'Guzman', 'profescaocr@bolsua.com', '2020-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(8, 'Frankie', 'De John', 'dejocahn@gmaily.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(9, 'Andres', 'Guzman', 'profesacor@bolsta.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(10, 'Frankie', 'De John', 'dejacohn@gmaril.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(11, 'Andres', 'Guzman', 'profeacsor@bolwsa.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(12, 'Frankie', 'De John', 'dejoachn@gmawil.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(13, 'Andres', 'Guzman', 'profesoacr@bolwwsa.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(14, 'Frankie', 'De John', 'dejeohn@gmawil.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(15, 'Andres', 'Guzman', 'profewsor@boalsa.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(16, 'Frankie', 'De John', 'dejohn@gmaail.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(17, 'Andres', 'Guzman', 'proqfesor@bolusa.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(18, 'Frankie', 'De John', 'deejohn@gmyail.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(19, 'Andres', 'Guzman', 'proefesor@btolsa.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(20, 'Frankie', 'De John', 'dejohn@gtmail.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(21, 'Andres', 'Guzman', 'profdesor@bolsa.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(22, 'Frankie', 'De John', 'dejaotthn@gmail.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(23, 'Andres', 'Guzman', 'profeshaasor@bolsa.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(24, 'Frankie', 'De John', 'dejyohn@gmail.com', '2017-08-28', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(5, 'Samuel', 'Garcia', 'samuelmix@mail.com', '2020-12-07', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(6, 'Gregorio', 'Tiburcio', 'gtiburcio@gmail.com', '2021-01-23', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(7, 'Xitlali', 'Nava', 'xnava@gmail.com', '2020-08-28', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(8, 'Lucero', 'Zapata', 'lzapata@gmail.com', '2020-07-03', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(9, 'Jose Luis', 'Hernandez', 'josehernandez@outlook.com', '2021-03-02', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(10, 'Joaquin', 'Hernandez', 'joaquinh@gmail.com', '2020-12-21', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(11, 'Oliver', 'Lopez', 'oliverlopez@hotmail.com', '2020-11-16', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(12, 'Alexis, 'Gonzalez', 'alexisGonza@gmail.com', '2020-10-13', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(13, 'Luis', 'Perez', 'pluis@gmail.com', '2020-12-23', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(14, 'Noe', 'Torres', 'noeTorrez@gmail.com', '2020-12-15', '');
 
-INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Panasonic Pantalla LCD', 25990, 4, NOW());
-INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Sony Camara digital DSC-W1990', 3, 12360, NOW());
-INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Apple iPod Shuffle', 1499890, 2, NOW());
-INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Malla Ciclonica De Acero 30487', 6, 1769, NOW());
-INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Disco de sierra Corte de Aluminio', 4, 1017, NOW());
-INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Martillo de corte doble', 56790, 5, NOW());
-INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Tornillos 2 pulgadas', 90, 60, NOW());
-INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Pala', 350, 22, NOW());
-INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Hacha', 190, 7, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Escalera de Extension 28 Peldaños', 4192, 15, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Escalera de Extension 24 Peldaños', 3777, 18, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Gancho y Soporte para Escalera D6200', 323, 20, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Escalera Tijera 1.83M', 991, 17, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Gancho y Soporte para Escalera 7100', 371, 17, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Polipasto para 1.5 Toneladas', 1995, 20, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Casco de Seguridad Amarillo', 103, 30, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Casco de Seguridad Azul', 103, 30, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Casco de Seguridad Blanco', 70, 35, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Casco de Seguridad Verde', 60, 35, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Lampara Led Tipo Minero', 51, 15, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Lentes de Seguridad Transparentes', 63, 25, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Guantes de Carnaza', 155, 25, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Guantes de Nylon Talla G', 45, 25, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Cinturon para Liniero', 830, 30, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Nivel de Burbuja', 221, 42, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Multimetro Digital 10000Vcd', 1328, 13, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Mini Pinza de Punta Larga 4.5', 38, 25, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Pinza Peladora de Forro de 6', 68, 5, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Pinza de Punta Larga Tipo Americana 7.5', 58, 50, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Pinza de Mecanica de 8', 74, 45, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Pinza de Corte Diagonal Tipo Americana', 60, 43, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Kit 11 Herramientas con Aislamiento', 2669, 5, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Kit Desarmadores Plano Y Cruz', 146, 28, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Peladora de Cable Ajustable', 1000, 14, NOW());
+INSERT INTO productos(nombre, precio, stock, create_at) VALUES('Martillo con Mango de Fibra de Vidrio', 109, 38, NOW());
+                                                                          
 
-INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES ('Factura equipos de oficina', null, 1, NOW());
-INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES ('Factura Bicicleta', 'Nota', 1, NOW());
+INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES ('Venta materiales escalera', null, 1, NOW());
+INSERT INTO facturas (descripcion, observacion, cliente_id, create_at) VALUES ('Venta de Cascos', 'Nota', 1, NOW());
 
 INSERT INTO facturas_items(cantidad, producto_id, factura_id) VALUES (1, 1, 1);
 INSERT INTO facturas_items(cantidad, producto_id, factura_id) VALUES (2, 2, 1);
-INSERT INTO facturas_items(cantidad, producto_id, factura_id) VALUES (1, 3, 2);
+INSERT INTO facturas_items(cantidad, producto_id, factura_id) VALUES (12, 8, 2);
 
 
 INSERT INTO users (username, password, enabled) VALUES('user', '$2a$10$rh3AtT7aVrqCf85VReMD..pwyXpz8T1UuCdfJZsrcCb1xMq14gC6y', 1);
