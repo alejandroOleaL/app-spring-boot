@@ -1,12 +1,12 @@
 /* poblando tables */
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(1, 'Andres', 'Guzman', 'profesor@bolsa.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(2, 'Frankie', 'De John', 'dejohn@gmail.com', '2017-08-28', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(1, 'Andres', 'Gallardo', 'agallardo@gmail.com', '2020-08-28', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(2, 'Victor', 'Hernandez', 'vhernandez@gmail.com', '2020-10-10', '');
 
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(3, 'Andres', 'Guzman', 'mini@bolsas.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(4, 'Frankie', 'De John', 'dedjohn@gmanil.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(5, 'Andres', 'Guzman', 'profedsor@bolsma.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(6, 'Frankie', 'De John', 'dejochn@gmaiul.com', '2017-08-28', '');
-INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(7, 'Andres', 'Guzman', 'profescaocr@bolsua.com', '2017-08-28', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(3, 'Fernando', 'Garcia', 'fgarcia@outlook.com', '2021-01-08', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(4, 'Axel', 'Martinez', 'axelmar@hotmail.com', '2021-02-21', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(5, 'Andres', 'Guzman', 'profedsor@bolsma.com', '2020-12-07', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(6, 'Frankie', 'De John', 'dejochn@gmaiul.com', '2021-01-23', '');
+INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(7, 'Andres', 'Guzman', 'profescaocr@bolsua.com', '2020-08-28', '');
 INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(8, 'Frankie', 'De John', 'dejocahn@gmaily.com', '2017-08-28', '');
 INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(9, 'Andres', 'Guzman', 'profesacor@bolsta.com', '2017-08-28', '');
 INSERT INTO clientes(id, nombre, apellido, email, create_at, foto) VALUES(10, 'Frankie', 'De John', 'dejacohn@gmaril.com', '2017-08-28', '');
@@ -43,7 +43,7 @@ INSERT INTO facturas_items(cantidad, producto_id, factura_id) VALUES (2, 2, 1);
 INSERT INTO facturas_items(cantidad, producto_id, factura_id) VALUES (1, 3, 2);
 
 
-INSERT INTO users (username, password, enabled) VALUES('andres', '$2a$10$rh3AtT7aVrqCf85VReMD..pwyXpz8T1UuCdfJZsrcCb1xMq14gC6y', 1);
+INSERT INTO users (username, password, enabled) VALUES('user', '$2a$10$rh3AtT7aVrqCf85VReMD..pwyXpz8T1UuCdfJZsrcCb1xMq14gC6y', 1);
 INSERT INTO users (username, password, enabled) VALUES('admin', '$2a$10$3BULRvCQ2fCzsxQFKV8o1OCxy/Ei/9YXRYFYWZAk.hpLuZ3ecPaly', 1);
 
 INSERT INTO authorities (user_id, authority) VALUES(1, 'ROLE_USER');
